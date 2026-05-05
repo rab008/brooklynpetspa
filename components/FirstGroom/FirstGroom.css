@@ -1,0 +1,139 @@
+.groomWrapper {
+  background-color: var(--color-bg);
+}
+
+.groomInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.groomImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* ─── Text ─── */
+.groomText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.groomLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.groomHeading {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3.5vw, 2.375rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.groomBody {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.groomBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 2rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-btn);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.groomBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ─── Breed Section ─── */
+.groomBreedWrapper {
+  background-color: var(--color-surface);
+}
+
+.groomBreedHeading {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.groomBreedIntro {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  max-width: 680px;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.groomBreedGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.groomBreedTag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.625rem 1rem;
+}
+
+.groomBreedTag svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.groomBreedNote {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .groomInner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .groomImageWrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .groomBreedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

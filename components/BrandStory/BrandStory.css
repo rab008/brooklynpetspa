@@ -1,0 +1,84 @@
+.brandWrapper {
+  background-color: var(--color-surface);
+}
+
+.brandInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ─── Image ─── */
+.brandImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+/* ─── Text ─── */
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.brandLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+}
+
+.brandHeading {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3.5vw, 2.375rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.brandBody {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* ─── Badges ─── */
+.brandBadges {
+  display: flex;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+
+.brandBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.brandBadge svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-sage);
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .brandInner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .brandImageWrap {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+}

@@ -1,0 +1,112 @@
+.reviewWrapper {
+  background-color: var(--color-bg);
+}
+
+.reviewHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.reviewLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 0.75rem;
+}
+
+.reviewHeading {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.375rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.25;
+}
+
+.reviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.reviewCard {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.reviewStars {
+  display: flex;
+  gap: 2px;
+  color: #f59e0b;
+  font-size: 1rem;
+}
+
+.reviewQuote {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.75;
+  flex: 1;
+}
+
+.reviewReviewer {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-top: auto;
+}
+
+.reviewAvatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--color-sage);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.reviewReviewerName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.reviewReviewerPet {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 0.125rem;
+}
+
+.reviewGoogleBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.reviewGoogleBadge svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+  .reviewGrid {
+    grid-template-columns: 1fr;
+  }
+}

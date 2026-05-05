@@ -1,0 +1,84 @@
+/* ─── Design Tokens ─── */
+:root {
+  --color-bg: #F3F3F3;
+  --color-surface: #E8E8E8;
+  --color-primary: #27304B;
+  --color-accent: #f25e44;
+  --color-sage: #27304B;
+  --color-text: #252525;
+  --color-text-muted: #606070;
+  --color-border: #DEDEDE;
+  --color-footer-bg: #252525;
+  --color-footer-text: #d1cec9;
+
+  --font-display: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-dm-sans), 'Helvetica Neue', Arial, sans-serif;
+
+  --radius-card: 16px;
+  --radius-btn: 999px;
+  --header-height: 152px;
+}
+
+/* ─── Reset ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 126px; /* 80px mobile nav + 46px call bar */
+  }
+}
+
+/* ─── Shared Section Container ─── */
+.section {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 5vw, 5rem);
+  padding-block: clamp(4rem, 8vw, 6rem);
+}

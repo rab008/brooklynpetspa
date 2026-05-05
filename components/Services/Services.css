@@ -1,0 +1,108 @@
+.svcWrapper {
+  background-color: var(--color-bg);
+}
+
+.svcHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.svcLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 0.75rem;
+}
+
+.svcHeading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.svcSub {
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  max-width: 479px;
+  margin-inline: auto;
+  line-height: 1.65;
+}
+
+.svcGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.svcCard {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.svcCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 28px rgba(196, 137, 111, 0.14);
+}
+
+.svcIconWrap {
+  width: 48px;
+  height: 48px;
+  color: var(--color-sage);
+  margin-bottom: 1.25rem;
+}
+
+.svcIconWrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.svcCardTitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.625rem;
+}
+
+.svcCardDesc {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.svcCardLink {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  align-self: flex-start;
+}
+
+.svcCardLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 992px) {
+  .svcGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .svcGrid {
+    grid-template-columns: 1fr;
+  }
+}
