@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { routes } from '@/lib/routes'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://brooklynpetspa.com'
 
